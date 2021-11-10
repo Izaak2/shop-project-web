@@ -1,7 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import HttpService from "../Services/http-service";
 
-function App() {
+const http = new HttpService();
+
+
+
+function App(props) {
+
+  http.getProducts();
+
   return (
     <div className="container App">
       <header className="App-header">
@@ -21,5 +29,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
